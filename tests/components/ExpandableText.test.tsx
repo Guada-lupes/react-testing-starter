@@ -10,7 +10,7 @@ describe("ExpandableText", () => {
     expect(article).toBeInTheDocument();
     expect(article).toHaveTextContent(/hola/i);
   });
-  //comprubeo que el boton no se renderiza en caso de texto pequeño, para ello utilizo queryByRole para que no me fallo
+  //comprubeo que el boton no se renderiza en caso de texto pequeño, para ello utilizo queryByRole para que no me de fallo en lugar de getByrole
   it("No debería renderizar el boton con texto pequeño", () => {
     render(<ExpandableText text="Hola" />);
     const button = screen.queryByRole("button");
